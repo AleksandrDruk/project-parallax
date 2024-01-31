@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;1,300&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    height: .1rem;
+    width: .5rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #67ccff;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #194eb9;
+    border-radius: 5rem;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1d002c;
+    color: #fff;
+    overflow-x: hidden;
+
+}
+
+.header {
+    padding: 25px 10%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    z-index: 1001;
+}
+
+.logo {
+    font-size: 2rem;
+    color: #12f7ff;
+    font-weight: 600;
+}
+
+.nav__list {
+    display: flex;
+    vertical-align: baseline;
+    align-items: center;
+    margin-left: auto;
+}
+
+.nav__item {
+    margin-left: 1rem;
+}
+
+.nav__link {
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 5px 15px;
+    border: 2px solid #12f7ff;
+    border-radius: 25px;
+    transition: all .3s ease;
+}
+
+.nav__link:hover {
+    box-shadow: 0 0 1rem #12f7ff;
+    background-color: #12f7ff;
+    color: #1d002c;
+}
+
+.nav__link.active {
+    box-shadow: 0 0 1rem #12f7ff;
+    background-color: #12f7ff;
+    color: #1d002c;
+}
+
+section {
+    min-height: 100vh;
+}
+
+.parallax-home {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.parallax-home img {
+    position: absolute;
+    object-fit: cover;
+    pointer-events: none;
+
+}
+
+.main__title {
+    position: absolute;
+    font-size: 2.5rem;
+    text-shadow: 0 10px 4px rgba(0, 0, 0, 0.85);
+    top: 85%;
+    left: 3%;
+}
+
+.parallax-home img#moon,
+img#desert-moon {
+    mix-blend-mode: screen;
+}
+
+.about {
+    position: relative;
+    bottom: -27px;
+}
+
+.about img {
+    position: absolute;
+    z-index: 1000;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.about img.about__waterfall {
+    position: absolute;
+    top: -95px;
+}
+
+.about .info-box {
+    position: absolute;
+    top: 0%;
+    left: 10%;
+    width: 50%;
+    z-index: 1003;
+    background-color: #1d002c;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.about__title {
+    margin-bottom: 5px;
+    font-size: 2.5rem;
+}
+
+.info-box p {
+    margin-top: .5rem;
+    margin-bottom: 1.5rem;
+}
+
+.about__btn {
+    background-color: #12f7ff;
+    color: #1d002c;
+    border-radius: 25px;
+    padding: .5rem 1rem;
+    transition: all .3s ease;
+    border: 2px solid #12f7ff;
+    font-weight: 500;
+}
+
+.about__btn:hover {
+    box-shadow: 0 0 1rem #12f7ff;
+    background-color: #1d002c;
+    color: #12f7ff;
+}
+
+.products {
+    padding: 10rem 10%;
+    background-color: #121137;
+}
+
+.products__card img {
+    max-width: 200px;
+    height: 200px;
+    margin-top: -4rem;
+    filter: drop-shadow(0 0 0.5rem #12f7ff);
+}
+
+.products__title {
+    font-size: 2rem;
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.products__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.products__card {
+    padding: 1rem;
+    border: 1px solid #12f7ff;
+    text-align: center;
+    border-radius: 25px;
+    display: block;
+    transition: all .4s ease;
+    z-index: 999;
+}
+
+.products__card:hover {
+    cursor: pointer;
+    transform: translateY(-7px);
+}
+
+.products__card-info {
+    padding-bottom: .5rem;
+}
+
+.products__card-info p {
+    padding: .5rem 0 1.5rem 0;
+}
+
+.products__card-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.products__card-name span {
+    color: #04cf37;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.products__card-btn {
+    display: block;
+    width: 60%;
+    margin: auto;
+}
+
+#progress {
+    position: fixed;
+    /* background-color: #194eb9; */
+    z-index: 1000;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    display: none;
+    place-items: center;
+    border-radius: 50%;
+    color: #1d002c;
+    cursor: pointer;
+}
+
+#progress-value {
+    display: block;
+    height: calc(100% - 12px);
+    width: calc(100% - 12px);
+    background-color: #fff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 30px;
+}
+
+audio::-webkit-media-controls {
+    display: flex !important;
+    justify-content: space-between;
+}
+
+
+/* Стилизация кнопки воспроизведения */
+audio::-webkit-media-controls-play-button {
+    /* Цвет фона */
+    color: #fff;
+    /* Цвет текста */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Стилизация ползунка громкости */
+audio::-webkit-media-controls-volume-slider {
+    width: 100px;
+    /* Ширина ползунка */
+}
+
+/* Скрываем все кнопки, кроме кнопки воспроизведения (play) */
+audio::-webkit-media-controls-seek-back-button,
+audio::-webkit-media-controls-seek-forward-button,
+audio::-webkit-media-controls-timeline {
+    display: none !important;
+}
+
+/* Скрываем элементы отображения времени воспроизведения */
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+    display: none !important;
+}
+
+/* Скрываем точки в таймлайне (временной шкале) */
+audio::-webkit-media-controls-seek-back-button::before,
+audio::-webkit-media-controls-seek-forward-button::before {
+    display: none !important;
+}
+
+/* Скрываем элемент выбора скорости воспроизведения */
+audio::-webkit-media-controls-speed-selector,
+audio::-webkit-media-controls-mute-button::before,
+audio::-webkit-media-controls-volume-slider::before {
+    display: none !important;
+}
+
+audio {
+    margin-top: 5px;
+    width: 100px;
+    height: 40px;
+}
